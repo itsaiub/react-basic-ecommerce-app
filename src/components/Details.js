@@ -51,7 +51,10 @@ const Details = () => {
                   </Link>
                   <ButtonContainer
                     cart
-                    onClick={() => value.addToCart(id)}
+                    onClick={() => {
+                      value.addToCart(id);
+                      value.openModal(id);
+                    }}
                     disabled={inCart ? true : false}
                   >
                     {inCart ? "inCart" : "add to cart"}
