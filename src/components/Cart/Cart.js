@@ -6,7 +6,7 @@ import EmptyCart from "./EmptyCart";
 import CartList from "./CartList";
 import CartTotals from "./CartTotals";
 
-const Cart = () => {
+const Cart = props => {
   return (
     <section>
       <ProductConsumer>
@@ -18,7 +18,7 @@ const Cart = () => {
                 <Title name="your" title="cart" />
                 <CartColumn />
                 <CartList value={value} />
-                <CartTotals value={value} />
+                <CartTotals value={value} history={props.history} />
               </Fragment>
             );
           } else {
