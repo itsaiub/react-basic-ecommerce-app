@@ -4,6 +4,7 @@ import Title from "../Title";
 import CartColumn from "./CartColumn";
 import EmptyCart from "./EmptyCart";
 import CartList from "./CartList";
+import CartTotals from "./CartTotals";
 
 const Cart = () => {
   return (
@@ -17,6 +18,7 @@ const Cart = () => {
                 <Title name="your" title="cart" />
                 <CartColumn />
                 <CartList value={value} />
+                <CartTotals value={value} />
               </Fragment>
             );
           } else {

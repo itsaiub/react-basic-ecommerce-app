@@ -5,7 +5,7 @@ const CartItem = ({ item, value }) => {
   const { increment, decrement, removeItem } = value;
 
   return (
-    <div className="row my-2 text-capitalize text-center">
+    <div className="row my-3 text-capitalize text-center">
       <div className="col-10 mx-auto col-lg-2">
         <img
           src={img}
@@ -24,13 +24,13 @@ const CartItem = ({ item, value }) => {
       </div>
       <div className="col-10 mx-auto col-lg-2 my-2 my-lg-0">
         <div className="d-flex justify-content-center">
-          <span className="btn btn-black mx-1" onClick={() => decrement(id)}>
+          <button className="btn btn-black mx-1" onClick={() => decrement(id)}>
             -
-          </span>
+          </button>
           <span className="btn btn-price mx-1">{count}</span>
-          <span className="btn btn-black mx-1" onClick={() => increment(id)}>
+          <button className="btn btn-black mx-1" onClick={() => increment(id)}>
             +
-          </span>
+          </button>
         </div>
       </div>
       <div className="col-10 mx-auto col-lg-2">
